@@ -1,0 +1,25 @@
+.page-name {
+  padding: 40px;
+  color: #666666;
+  font-size: 18px;
+}
+.page-content {
+  padding: 0 10px 10px;
+}
+
+.box-card {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  .title {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  .content {
+    padding: 10px;
+  }
+  .data {
+  }
+  .tool {
+    margin-top: 10px;
+  }
+}

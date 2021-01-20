@@ -1,0 +1,54 @@
+html[mobile] {
+  $vw_fontsize: 100; // iPhone 6尺寸的根元素大小基准值
+  // 根元素大小使用 vw 单位
+  $vw_design: 375;
+  /* 屏幕最大宽度 */
+  $max_screen_width: 540px;
+  /* 屏幕最小宽度 */
+  $min_screen_width: 320px;
+
+  font-size: ($vw_fontsize / ($vw_design)) * 100vw;
+  // 同时，通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: $min_screen_width) {
+    font-size: 85.3333333px;
+  }
+  @media (max-width: 992px) and (min-width: $max_screen_width) {
+    font-size: 144px;
+  }
+  body {
+    max-width: $max_screen_width;
+    min-width: $min_screen_width;
+    margin: 0 auto;
+    font-size: 16px;
+    @media screen and (max-width: $min_screen_width) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $max_screen_width) {
+      font-size: 16px;
+    }
+  }
+}
+
+html[pc] {
+  font-size: 5.2083333vw;
+  @media screen and (max-width: 992px) {
+    font-size: 51.666667px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 100px;
+  }
+  body {
+    margin: 0 auto;
+    font-size: 16px;
+  }
+}
+
+html {
+  background-color: #e8e8ed;
+}
+body {
+  background: #f9f8f7;
+  line-height: 1.4;
+  color: #333333;
+  position: relative;
+}
